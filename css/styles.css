@@ -1,0 +1,623 @@
+:root{
+    --red:#ff2e63;
+    --black:#252a34;
+    --blue:#08d9d6;
+    --white:#eaeaea;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #fff;
+    overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
+}
+/**Go top**/
+.go-top{
+    position: fixed;
+    bottom: 100px;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    border:2px solid var(--red);
+    background: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 400ms;
+    z-index: 9999;
+}
+.go-top:hover{
+    border: 2px solid var(--white);
+    background: var(--red);
+}
+.go-top:hover span{
+    color: var(--white);
+}
+.go-top >  span{
+    font-size: 30px;
+    color: var(--black);
+}
+/**Go top**/
+
+/**Menu de navegacion**/
+#header{
+    position: relative;
+    width: 100%;
+}
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    border: 2px solid var(--red);
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+}
+.menu .logo-box{
+    margin-left: 20px;
+}
+.menu .logo-box h1{
+    text-decoration: none;
+    font-size: 35px;
+    font-weight: bold;
+    /**background: var(--blue);**/
+    padding: 10px;
+    border-radius: 24px;
+    color: var(--black);
+}
+.menu .list-container{
+    margin-right: 20px;
+}
+.menu .list-container .lists{
+    display: flex;
+}
+.menu .list-container .lists li{
+    list-style: none;
+}
+.menu .list-container .lists li a{
+    text-decoration: none;
+    margin: 0px 10px;
+    padding: 5px;
+    color: var(--black);
+    border-radius: 24px;
+    font-size: 16px;
+    transition: 0.5s;
+}
+.menu .list-container .lists li a.activo{
+    background: var(--red);
+    color: #fff;
+}
+.menu .list-container .lists li a:hover{
+    background: var(--blue);
+    color: #fff;
+}
+
+/**Menu de navegacion**/
+
+/**IMG Header**/
+.img-header{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../img/xxx.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.img-header .welcome{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.img-header .welcome .foto{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.img-header .welcome .foto img{
+    object-fit: cover;
+    border-radius: 100px;
+    border: 3px solid var(--blue);
+}
+.img-header .welcome h1{
+    margin-top: 20px;
+    font-size: 50px;
+    color: #fff;
+    font-weight: bold;
+}
+.img-header .welcome hr{
+    width: 400px;
+    height: 2px;
+    background: #fff;
+    border: none;
+    margin-top: 5px;    
+}
+.img-header .welcome h2{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 200;
+}
+.img-header .welcome > button{
+    width: 170px;
+    height: 40px;
+    background: var(--red);
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.img-header .welcome > button:hover{
+    background: var(--blue);
+    color: #fff;
+}
+/**IMG Hheader**/
+
+/**Acerca de nosotros**/
+.acerca-de{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.acerca-de .info-container{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.acerca-de .info-container h1{
+    margin-top: 100px;
+    font-size: 40px;
+    font-weight: 400;
+    color: var(--black);
+    text-align: center;
+    margin-bottom: 20px;
+}
+.acerca-de .info-container hr{
+    width: 35%;
+    margin: auto;
+    height: 2px;
+    background: var(--black);
+    border: none;
+}
+
+.acerca-de .info-container .contenedor-info{
+    width: 100%;
+    margin: auto;
+    display: flex;
+}
+
+.acerca-de .info-container .contenedor-info .perfil{
+    margin-top: 100px;
+    width: 50%;
+}
+.acerca-de .info-container .contenedor-info .perfil h2{
+    text-align: center;
+    width: 100%;
+}
+.acerca-de .info-container .contenedor-info .perfil p{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    color: var(--black);
+    margin: 20px;
+}
+
+.acerca-de .info-container .contenedor-info .cursos{
+    margin-top: 100px;
+    width: 50%;
+}
+.acerca-de .info-container .contenedor-info .cursos h2{
+    text-align: center;
+    width: 100%;
+}
+.acerca-de .info-container .contenedor-info .cursos li{
+    width: 100%;
+    text-align: center;
+    margin: 20px;
+    font-size: 20px;
+    color: var(--black);
+ 
+}
+
+.acerca-de .info-container .about-more{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.acerca-de .info-container .about-more button{
+    width: 120px;
+    height: 40px;
+    background: var(--red);
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.acerca-de .info-container .about-more button:hover{
+    background: var(--blue);
+    color: #fff;
+}
+/**Acerca de nosotros**/
+
+/**Nuetros proyectos**/
+.our-projects{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../img/img-2.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    margin-top: 100px;
+}
+.our-projects .deg-background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+.our-projects .ejeZproject{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+.our-projects .ejeZproject .container-project{
+    width: 90%;
+    margin: auto;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+.our-projects .ejeZproject .container-project .project-title{
+    border: 2px solid #fff;
+    padding: 10px;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+.our-projects .ejeZproject .container-project .project-title h2{
+    font-size: 40px;
+    color: #fff;
+    font-weight: normal;
+    margin-top: 20px;
+}
+.our-projects .ejeZproject .container-project .project-title hr{
+    background: #fff;
+    width: 50%;
+    margin: 10px auto;
+}
+
+.our-projects .ejeZproject .container-project .contenedor-img{
+    width: 100%;
+    display: flex;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+
+.our-projects .ejeZproject .container-project .contenedor-img .instrumentacion{
+    width: 30%;
+    margin: 20px;
+}
+.our-projects .ejeZproject .container-project .contenedor-img .instrumentacion img{
+    width: 360px;
+    height: 300px;
+    border-radius: 10%;
+}
+.our-projects .ejeZproject .container-project .contenedor-img .instrumentacion h2{
+    font-size: 25px;
+    text-align: center;
+    color: #fff;
+    font-weight: normal;
+}
+.our-projects .ejeZproject .container-project .contenedor-img .instrumentacion p{
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+    font-weight: normal;
+}
+
+.our-projects .ejeZproject .container-project .contenedor-img .automatizacion{
+    width: 30%;
+    margin: 20px;
+}
+.our-projects .ejeZproject .container-project .contenedor-img .automatizacion img{
+    width: 360px;
+    height: 300px;
+    border-radius: 10%;
+}
+.our-projects .ejeZproject .container-project .contenedor-img .automatizacion h2{
+    font-size: 25px;
+    text-align: center;
+    color: #fff;
+    font-weight: normal;
+}
+.our-projects .ejeZproject .container-project .contenedor-img .automatizacion p{
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+    font-weight: normal;
+}
+
+.our-projects .ejeZproject .container-project .contenedor-img .sistemas-fotovoltaicos{
+    width: 30%;
+    margin: 20px;
+}
+.our-projects .ejeZproject .container-project .contenedor-img .sistemas-fotovoltaicos img{
+    width: 360px;
+    height: 300px;
+    border-radius: 10%;
+}
+.our-projects .ejeZproject .container-project .contenedor-img .sistemas-fotovoltaicos h2{
+    font-size: 25px;
+    text-align: center;
+    color: #fff;
+    font-weight: normal;
+}
+.our-projects .ejeZproject .container-project .contenedor-img .sistemas-fotovoltaicos p{
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+    font-weight: normal;
+}
+
+/**Nuetros proyectos**/
+
+/**Testimonios**/
+.testimonios{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
+}
+.testimonios .testimonios-title{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.testimonios .testimonios-title h2{
+    font-size: 40px;
+    color: var(--black);
+    font-weight: normal;
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+.testimonios .testimonios-title hr{
+    width: 35%;
+    margin: auto;
+    height: 2px;
+    background: var(--black);
+    border: none;
+}
+.testimonios .box-testimonios{
+    width: 90%;
+    margin: 80px auto;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.testimonios .box-testimonios .card-testimonio{
+    width: 45%;
+    margin: 20px;
+
+}
+.testimonios .box-testimonios .card-testimonio .card-img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.testimonios .box-testimonios .card-testimonio .card-img img{
+    width: 300px;
+    height: 300px;
+    border-radius: 20%;
+    object-fit: cover;
+    cursor: pointer;
+}    
+.testimonios .box-testimonios .card-testimonio .testimonio-text{
+    width: 100%;
+    border: 2px solid var(--red);
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 200ms;
+}
+.testimonios .box-testimonios .card-testimonio .testimonio-text h4{
+    color: var(--red);
+    font-weight: normal;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: 200ms;
+}
+.testimonios .box-testimonios .card-testimonio .testimonio-text p{
+    font-size: 15px;
+    color: var(--black);
+    text-align: center;
+    line-height: 25px;
+    transition: 200ms;
+}
+.testimonios .box-testimonios .card-testimonio .testimonio-text:hover{
+    border:2px solid var(--blue);
+}
+.testimonios .box-testimonios .card-testimonio .testimonio-text:hover h4{
+    color: var(--blue);
+}
+/**Testimonios**/
+
+/**Footer**/
+.footer{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../img/footer.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.footer .deg-footer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+.footer .ejeZfooter{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.footer .footer-content{
+    width: 90%;
+    padding-top: 100px;
+    margin: auto;
+}
+.footer .footer-content .footer-title{
+    width: 50%;
+    margin: auto;
+    border:2px solid #fff;
+    padding: 15px;
+}
+.footer .footer-content .footer-title h2{
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+.footer .footer-content .footer-title hr{
+    width: 80%;
+    margin: auto;
+}
+.footer .footer-content .formulario-content{
+    width: 60%;
+    background: #fff;
+    border-radius: 24px;
+    border: 2px solid var(--red);
+    margin: 50px auto;
+    padding: 30px;
+    margin-bottom: 150x;
+}
+.footer .footer-content .formulario-content #formulario{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.footer .footer-content .formulario-content #formulario label{
+    text-align: center;
+    color: var(--black);
+    font-size: 22px;
+    margin: 30px 0px 10px 0px;
+}
+.footer .footer-content .formulario-content #formulario input{
+    width: 90%;
+    height: 35px;
+    margin: auto;
+    border: 2px solid var(--red);
+    border-radius: 24px;
+    outline: none;
+    text-align: center;
+    font-size: 17px;
+    color: var(--black);
+}
+.footer .footer-content .formulario-content #formulario textarea{
+    width: 90%;
+    height: 200px;
+    margin: auto;
+    border: 2px solid var(--red);
+    border-radius: 24px;
+    outline: none;
+    font-size: 15px;
+    color: var(--black);
+    padding: 20px;
+}
+.footer .footer-content .formulario-content #formulario .send{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 40px 0px;
+}
+.footer .footer-content .formulario-content #formulario .send button{
+    width: 150px;
+    height: 40px;
+    background: var(--red);
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.footer .footer-content .formulario-content #formulario .send button:hover{
+    background: var(--blue);
+}
+.footer  .footer-text{
+    position: flex;
+    bottom: 0;
+    
+    width: 100%;
+    height: 35px;
+    background: rgba(0, 0, 0, 0.8);
+    border-top: 2px solid #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer  .footer-text p{
+    color: #fff;
+    font-size: 20px;
+}
+
+/**Footer**/
